@@ -15,7 +15,7 @@ func Replace(filename string, old, new string) error {
 
 	data := bytes.Replace(buf, []byte(old), []byte(new), 1)
 
-	f, err := os.OpenFile(filename, os.O_WRONLY, 0)
+	f, err := os.OpenFile(filename, os.O_WRONLY|os.O_TRUNC, 0)
 	if err != nil {
 		return err
 	}
