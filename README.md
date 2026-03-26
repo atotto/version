@@ -1,5 +1,10 @@
 # version utility
 
+install:
+```
+$ go install github.com/atotto/version@latest
+```
+
 ## version up
 
 update patch version:
